@@ -1,0 +1,5 @@
+/FEJava/resources/text/tutorialMap.txt
+Player
+/FEJava/resources/text/tutorialProtag.txt
+Generic Enemy
+/FEJava/resources/text/tutorialAntag.txt

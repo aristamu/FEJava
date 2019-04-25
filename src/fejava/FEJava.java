@@ -98,7 +98,8 @@ public class FEJava extends JPanel implements KeyListener
         
         startLevel ();
         
-        buffer = new BufferedImage ((int)windowWidth + insets.right + insets.left, (int)windowHeight + insets.top + insets.bottom, BufferedImage.TYPE_INT_RGB);
+        buffer = new BufferedImage ((int)windowWidth + insets.right + insets.left, 
+                (int)windowHeight + insets.top + insets.bottom, BufferedImage.TYPE_INT_RGB);
                 
         populateMap ();
         
@@ -123,7 +124,8 @@ public class FEJava extends JPanel implements KeyListener
         try
         {
             //!! Will eventually need to allow multiple levels
-            Level levelTest = new Level ("/FEJava/resources/text/tutorial.txt", (int)windowWidth, (int)windowHeight, insets);
+            Level levelTest = new Level ("/FEJava/resources/text/tutorial.txt", 
+                    (int)windowWidth, (int)windowHeight, insets);
             currentLevel = levelTest;
             imageList = currentLevel.getTerrain ((int)windowWidth, (int)windowHeight);
         }

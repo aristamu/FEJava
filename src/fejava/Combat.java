@@ -75,13 +75,6 @@ public class Combat
         //Checks if alive after every round
         while (isAlive (atkr, defr) == true && isAlive (defr, atkr) == true && action < 3)
         {
-            /*
-            Save all rounds to variables within class
-            Create ArrayList holding information about each combat action
-            "atkr misses/hits/crits defr with atkr.weapon"
-            "atkr does x damage"
-            "defr HP: yy"
-            */
             if (action == 0)
             {
                 //System.out.println ("A: " + action);
@@ -188,4 +181,26 @@ public class Combat
             return 0;
         }
     }
+    
+    // REWRITE BELOW
+    // ?? Possibly create a separate class for actions, allowing for skills, etc
+    
+    public ArrayList roundOrder (Unit atkr, Unit defr)
+    {
+        /*
+        Each action has a priority, which determines its position in the list combined with
+            unit's initiative
+        So attack = 1, counter = 5, double = 10 (for either side)
+        Then vantage changes counter to 0, desperation changes double to 2, etc
+        Each unit or weapon has a "standard action" built in, so everyone's default
+            standard defense is counter, but a weapon might replace that with vantage
+        Then actions are generated from the weapons wielded
+        Same priority then just go with default sorted order
+        Upon initiation, add all actions to the order, then sort, then execute
+        So weapon is brave then add two standard attacks, let it sort, then go
+        Standard actions are lists, extract from list and then add to round order
+        */
+        return null;
+    }
+    
 }

@@ -16,7 +16,6 @@ public class Weapon
     
     //!!Weapon effectiveness?
     //private String effective;
-    //??Durability?
     
     /**
      * Constructor for weapons
